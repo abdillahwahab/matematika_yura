@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Matematika Yura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Game Matematika Yura 🎮</h1>
+            <div class="stats">
+                <div class="score">Skor: <span id="score">0</span></div>
+                <div class="progress">
+                    Benar: <span id="correct">0</span> | 
+                    Salah: <span id="wrong">0</span> | 
+                    Total: <span id="total">0</span>
+                </div>
+                <div class="percentage">Akurasi: <span id="accuracy">0%</span></div>
+            </div>
+        </header>
+        
+        <div class="main-content">
+            <div class="game-area">
+                <div class="question-box">
+                    <h2 id="question">Memuat soal...</h2>
+                </div>
+                
+                <div class="answers">
+                    <button class="answer-btn" id="option1" onclick="checkAnswer(0)"></button>
+                    <button class="answer-btn" id="option2" onclick="checkAnswer(1)"></button>
+                    <button class="answer-btn" id="option3" onclick="checkAnswer(2)"></button>
+                    <button class="answer-btn" id="option4" onclick="checkAnswer(3)"></button>
+                </div>
+                
+                <div class="feedback" id="feedback"></div>
+                
+                <button class="next-btn" id="nextBtn" onclick="nextQuestion()" style="display:none;">Soal Berikutnya</button>
+                
+            </div>
+            
+            <div class="history-sidebar">
+                <div class="action-buttons">
+                    <button class="print-btn" onclick="printResults()">🖨️ Cetak Hasil</button>
+                    <!-- <button class="restart-btn" onclick="restartGame()">🔄 Mulai Ulang</button> -->
+                </div>
+                <div class="history-header">
+                    <h3>📋 Riwayat Jawaban</h3>
+                </div>
+                <div class="history-content" id="historyContent">
+                    <p class="no-history">Belum ada riwayat jawaban.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
